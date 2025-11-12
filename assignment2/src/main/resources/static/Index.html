@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Oblig2 s369521</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js" defer></script>
+  <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body class="">
+<div class="container">
+    <div class="row">
+        <div id="form" class="col-md-4" >
+            <h1>Bestilling av kinobiletter</h1>
+            <form class="form" >
+                <div  class="form-group">
+                    <label for="FilmChoice">Velg film</label>
+                        <select class="form-control" id="FilmChoice">
+                            <option value="" style="font-weight: bold">Velg film her</option>
+                        </select>
+                        <small for="FilmChoice"class="error text-danger"></small>
+                </div>
+                <div  class="form-group">
+                    <label for="Amount">Antall</label>
+                    <input class="form-control" id="Amount" placeholder="Antall">
+                    <small for="Amount"class="error text-danger"></small>
+                </div>
+                <div  class="form-group">
+                    <label for="FirstName">Fornavn</label>
+                    <input class="form-control" id="FirstName" placeholder="Fornavn">
+                    <small for="FirstName"class="error text-danger"></small>
+                </div>
+                <div  class="form-group">
+                    <label for="LastName">Etternavn</label>
+                    <input class="form-control" id="LastName" placeholder="Etternavn">
+                    <small for="LastName"class="error text-danger"></small>
+                </div>
+                <div  class="form-group">
+                    <label for="tlfNum">Telefonnr</label>
+                    <input class="form-control" id="tlfNum" placeholder="12345678">
+                    <small for="tlfNum"class="error text-danger"></small>
+                </div>
+                <div  class="form-group is-invalid">
+                    <label for="Email">Epost</label>
+                    <input class="form-control" id="Email" placeholder="bruker@email.com">
+                    <small for="Email" class="error text-danger"></small>
+                </div>
+            </form>
+    <button onclick="buyTicket()" class="btn btn-primary">Kjøp billett</button>
+        </div>
+        <div id="TicketStack" class="col-md-8">
+            <h2>Alle billetter</h2>
+            <table class="table table-dark table-striped" id="ticketTable"></table>
+            <button onclick="deleteOrders()" class="btn btn-danger">Slett alle billettene</button>
+        </div>
+    </div>
+</div>
+</body>
+</html>
